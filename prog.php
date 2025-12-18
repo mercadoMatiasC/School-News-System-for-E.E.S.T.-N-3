@@ -1,0 +1,96 @@
+﻿<html>
+   <head>
+     <link rel="icon" type="image/png" href="icos/logo.png">
+      <meta charset="utf-8">
+   	  <title>E.E.S.T. N°3</title>
+   	  <link rel="stylesheet" type="text/css" href="us.css">
+      <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <script src="js/all.min.js"></script>
+   </head>
+
+   <body>
+     <a href="index.php">
+     <div class="flut">
+     <div class="ttl">
+        <img class="logo" src="icos/logo.png"></img>
+          <span class="tlo">E.E.S.T. N°3</span>
+     </div></a>
+
+      <div id="header">
+          
+          <nav>
+           <div class="toggle">
+              <i class="fa fa-bars menu" aria-hidden="true"></i>
+           </div> 
+                                                             <center>
+<ul>
+            <a href="faqs.html">
+            <i id="icon" class="fa fa-question-circle" style="color: white;"></i>
+            </a>
+            <li><a href="us.html">Nosotros</a></li>
+            <li><a href="inst.html">Institucional</a></li>
+            <li><a href="mu.html">Material Alumnos</a></li>
+             <li><a style="background-color: #052047;" href="prog.php">Programas</a></li>
+             <a href="admin/login/login.php">
+             <i id="icon" class="fa fa-lg fa-fw fa-user" style="color: white;"></i>
+             </a>
+             </ul>
+                                                            </center>
+           </nav>
+         </div>
+        </div>
+
+  <div class="au">
+    <br><center>
+     <div class="qs"><h2 class="tl" >Programas de estudio</h2></div>
+     </center>
+  <?php include ('conexion.php');
+    
+    $consulta = "select * from programa order by created_at desc limit 3";
+    $conexion = Conectar();
+    $respuesta = mysqli_query($conexion, $consulta);
+
+   
+    foreach($respuesta as $item)
+    {
+      echo '<div class="notu" style="background: lightgray;
+                              text-transform: capitalize;
+                              border-radius: 2px; 
+                              color:black;
+                              padding:5px;
+                              border: #052047 3px solid;
+                              margin-bottom: 12px;"><h3>'.$item['titulo'].
+                              '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3><hr style="background: black;"><h6>'.$item['created_at'].
+                              '</h6><img src="admin/subidas/qui.png"><br></div>';       
+    }?>
+
+     </div>
+
+     <div class="foot">
+        <br><br><br><br>
+        <center>
+        <div class="fut">
+        Contacto: Tel (0223) 495-0285 - Sede: 14 de Julio 2550 - MDQ
+        </div>
+        <br>
+          <a href="https://www.fb.com/EESTSarmiento/"><img class="rs" src="icos/fb.png"></a>
+          <a href="https://www.instagram.com"><img  class="rs" src="icos/ig.png"></a>
+          <a href="https://www.twitter.com"><img  class="rs" src="icos/tw.png"></a>
+          <a href="https://www.youtube.com"><img  class="rs" src="icos/yt.png"></a>
+        </center>
+      </div>
+
+
+      <script src="jss/simplescrollup.js"></script>
+      <script src="js/jquery.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $('.menu').click(function(){
+            $('ul').toggleClass('active')
+          })
+        }) 
+      </script>
+      <script src="js/bootstrap.min.js"></script>
+      </body>
+</html>

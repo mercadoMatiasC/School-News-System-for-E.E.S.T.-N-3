@@ -1,0 +1,119 @@
+* {
+letter-spacing: 0.3px;
+margin:0px;
+padding:0px;
+}
+
+body{
+background: url("../imgs/bg.png");
+background-size: cover;
+}
+
+.espacio{
+    height:10px;
+}
+
+.logo{
+  float: left;
+  width: 120px;
+  height: 120px;
+}
+
+.rs{
+  width: 40px;
+  height: 40px;
+}
+
+.ttl{
+background-image: linear-gradient(to right, darkgrey, #052047, #052047,#052047, #052047);
+font-family: Times New Roman;
+font-weight: 700;
+letter-spacing: 1.5px;
+height: 80px;
+}
+
+.tlo{
+line-height: 6px;
+float: right;
+margin-right: 16%;
+margin-top: 35px;
+font-size:35px;
+color:#AEAEAE;
+}
+
+h1.ndh{
+    margin-top: 0px;
+    font-size: 25px;
+}
+
+.title{
+    background-image: linear-gradient(to right, darkgrey, #052047, #052047,#052047, #052047);
+    font-family: Times New Roman;
+    letter-spacing: 1.5px;
+    height: 110px;
+    }
+
+.tlo{
+    line-height: 30px;
+}
+
+.til{
+line-height: 55px;
+float: right;
+margin-right: 120px;
+margin-top: 35px;
+font-size:230%;
+color:#AEAEAE;
+}
+
+.top{
+    background-image: linear-gradient(to right, darkgrey, #052047, #052047,#052047, #052047);
+    margin-left:3%;
+    margin-right:3%;
+    background-color: white;
+    height:50px;
+    margin-bottom: 1%;
+    }
+
+
+    .fut{
+      border: black 3px solid;
+      height: 60px;
+      width: 73%;
+      border-radius:  7px;
+      font-weight: 700;
+      background-color: #333333;
+      line-height: 50px
+      }
+    
+    
+    .foot{
+      font-size: 15px;
+      line-height:20px;
+      display: block;
+      color:white;
+      clear:both;
+      margin-top: 80px;
+      background-image: linear-gradient(#141414, #141414, #141414, #141414, black);
+      height: 270px;
+      margin-bottom: 0px;
+    }
+
+@media (max-width:768px)
+{
+.tlo{
+  font-size:25px;
+}
+.ttl{
+    height: 85px;
+}
+ .fut { 
+   font-size: 10px;    
+}
+}
+@media (max-width:420px)
+{
+ .fut { 
+   font-size: 8px;    
+}
+}
